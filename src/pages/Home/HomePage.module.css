@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  padding: 40px 20px; /* Больше пространства для дыхания */
+  background: linear-gradient(
+    135deg,
+    #f5f7fa 0%,
+    #c3cfe2 100%
+  ); /* Градиент для фона */
+}
+
+.header {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff; /* Чистый белый фон для заголовка */
+  border-radius: 8px; /* Слегка закруглённые углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень для объема */
+  color: #2c3e50; /* Темно-синий для контраста */
+}
+
+h1 {
+  font-size: 2.5em; /* Увеличим шрифт заголовка */
+  color: #e74c3c; /* Ярко-красный цвет заголовка */
+}
+
+p {
+  font-size: 1.2em; /* Увеличим размер текста */
+  color: black; /* Спокойный синий цвет текста */
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+.featureImage {
+  width: 100%;
+}

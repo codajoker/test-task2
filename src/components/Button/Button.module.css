@@ -1,0 +1,23 @@
+.sendButton {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  background: #e44848;
+  width: fit-content;
+  &:hover,
+  &:focus {
+    background: #d84343;
+  }
+}
+
+.sendButtonText {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.08px;
+}
