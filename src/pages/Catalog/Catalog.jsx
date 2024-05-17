@@ -8,6 +8,7 @@ import {
 } from '../../redux/selectors';
 import CamperList from '../../components/CamperList/CamperList';
 import styles from './CatalogPage.module.css';
+import { clearCampers } from '../../redux/slice';
 
 export default function CatalogPage() {
   const [page, setPage] = useState(1);
@@ -19,11 +20,13 @@ export default function CatalogPage() {
     setPage(page + 1);
   };
   useEffect(() => {
-    if (!campers.length > 0) {
-      dispatch(getAllCampers({ page }));
-    }
+    dispatch(getAllCampers({ page }));
   }, [dispatch, page]);
-
+  useEffect(() => {
+    return () => {
+      dispatch(clearCampers()); // Очистка состояния при размонтировании компонента
+    };
+  }, [dispatch]);
   return (
     <section className={styles.section}>
       {isLoading && <p>Loading...</p>}

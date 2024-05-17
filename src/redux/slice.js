@@ -19,6 +19,9 @@ const campersSlice = createSlice({
 
       state.favorite.splice(index, 1);
     },
+    clearCampers(state) {
+      state.items = [];
+    },
     // cleanState
   },
   extraReducers: builder => {
@@ -39,5 +42,6 @@ const campersSlice = createSlice({
   },
 });
 
-export const { addFavorite, removeFavorite } = campersSlice.actions;
+export const { addFavorite, removeFavorite, clearCampers } =
+  campersSlice.actions;
 export const campersReducer = campersSlice.reducer;
